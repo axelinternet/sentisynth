@@ -77,12 +77,12 @@ public class MainApp extends PApplet {
                 letters = letters.substring(0, letters.length()-1);
             }
         } else if (key == ENTER) {
-            int s = score(letters);
+            int s = score(letters.toLowerCase());
             println(letters, s);
             letters="";
             background(80);
 
-            OscMessage myMessage = new OscMessage("/test");
+            OscMessage myMessage = new OscMessage("/score");
             myMessage.add(s); /* add an int to the osc message */
             oscP5.send(myMessage, myRemoteLocation);
 
