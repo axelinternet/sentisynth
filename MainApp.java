@@ -71,7 +71,7 @@ public class MainApp extends PApplet {
 
     }
 
-    public void keyPressed() {
+    public void keyTyped() {
         if (key == BACKSPACE) {
             if (letters.length() > 0) {
                 letters = letters.substring(0, letters.length()-1);
